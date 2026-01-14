@@ -1,0 +1,16 @@
+{
+  "Group": "Community",
+  "Name": "HytalePluginTemplate",
+  "Description": "A template for creating Hytale server plugins.",
+  "Website": "https://www.hytale.com",
+  "Authors": [
+    {
+      "Name": "CreatorName"
+    }
+  ],
+  "Main": "${group}.PluginTemplate",
+  "Version": "${version}",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {}
+}

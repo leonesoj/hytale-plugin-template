@@ -17,5 +17,9 @@ cd hytale-plugin-template/
 ./gradlew build
 ```
 
+### Gradle Dependency Resolution / IDE Sync
+Once you have placed the HytaleServer.jar in the 'libs' folder, you may have to [refresh](https://www.jetbrains.com/help/idea/jetgradle-tool-window.html#gradle_tasks_tool_window) your Gradle dependencies so that your IDE can resolve the Hytale API classes.<br>
+Additionally, you might have to `Invalidate Caches and Restart` your IDE to get everything working properly, if needed.
+
 ## Helpful Resources
 - [Hytale Server Manual](https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual)

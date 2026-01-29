@@ -7,24 +7,15 @@ version = '1.0.0'
 
 repositories {
     mavenCentral()
-}
-
-// Temporary workaround until Hypixel Studios releases their server jar to Maven Central
-def serverJar = file 'libs/HytaleServer.jar'
-
-dependencies {
-    compileOnly(files(serverJar))
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8'
-    doFirst {
-        if (!serverJar.exists()) {
-            throw new GradleException("HytaleServer.jar was not found in libs/. (See README)")
-        }
+    maven {
+        name = 'hytale-release'
+        url = 'https://maven.hytale.com/release'
     }
 }
-// Temporary workaround end
+
+dependencies {
+    compileOnly 'com.hypixel.hytale:Server:latest.release'
+}
 
 processResources {
     def props = [version: version, group: project.group]
